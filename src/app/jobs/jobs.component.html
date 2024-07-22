@@ -1,0 +1,5 @@
+<div>
+    @for (job of jobList; track jobList) {
+        <app-job-list [job]="job" (onFavClick)="addToFav(job)"></app-job-list>
+    }
+</div>

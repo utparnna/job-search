@@ -1,0 +1,5 @@
+<div>
+    @for (job of favJobList; track favJobList) {
+        <app-job-list [job]="job" [showFavIcon]="false"></app-job-list>
+    }
+</div>

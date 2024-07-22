@@ -1,0 +1,13 @@
+<p>
+    <img [src]="job.companyLogo" />
+    <label>
+        <a [routerLink]="'/jobs/'+job.id.toString()">{{job.title}}</a>
+        <small>Company: {{job.companyName}}</small>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <small>Reference: {{job.reference}}</small>
+    </label>
+    <span *ngIf="showFavIcon" class="icon-star" [class.active]="job.fav" (click)="favClick()"
+        [id]="'star-'+job.id"></span>
+</p>

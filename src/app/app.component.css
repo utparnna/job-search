@@ -1,0 +1,42 @@
+:host>div {
+    width: 800px;
+    margin: auto;
+    height: 100%;
+}
+
+:host>div>* {
+    float: left;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+ul>li {
+    width: 50%;
+    float: left;
+    text-align: center; 
+    cursor: pointer;
+}
+
+ul>li>a {
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+    color: currentColor;
+    border: 1px solid #1976d2ab;
+}
+
+.active {
+    background-color: royalblue;
+}
+
+.tab-container{
+    height: calc(100% - 45px);
+    overflow: auto;
+}

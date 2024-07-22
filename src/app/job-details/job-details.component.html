@@ -1,0 +1,29 @@
+<button routerLink="/jobs">Back</button>
+<p>
+    <img [src]="jobDetails.companyLogo" />
+    <label>
+        <b>{{jobDetails.companyName}} - {{jobDetails.title}}</b>
+        <br>
+        @for (types of jobDetails.types; track jobDetails) {
+        <small [innerHTML]="types"></small>
+        }
+        @for (industries of jobDetails.industries; track jobDetails) {
+        <small [innerHTML]="industries"></small>
+        }
+    </label>
+</p>
+<br>
+<p>
+    <b>Publish Date:&nbsp;</b>{{formatDate(jobDetails.publishDate)}}
+</p>
+<p>
+    <b>Location:&nbsp;</b>{{jobDetails.location}}
+</p>
+<p>
+    <b>Reference:&nbsp;</b>{{jobDetails.reference}}
+</p>
+<p>
+    <b>Description:&nbsp;</b>
+</p>
+<div [innerHTML]="jobDetails.description">
+</div>
