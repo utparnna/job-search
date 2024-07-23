@@ -11,7 +11,7 @@ import { Job } from '../job.model';
   styleUrl: './job-list.component.css'
 })
 export class JobListComponent {
-  @Input() job: Job | any;
+  @Input()  job!: Job;
   @Input() showFavIcon: boolean = true;
   @Output() onFavClick = new EventEmitter<Job>();
   public favClick(): void {

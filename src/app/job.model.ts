@@ -10,5 +10,6 @@ export interface JobDetails extends Job {
     industries: string,
     types: string[],
     description: string,
+    location:string,
     publishDate: string,
 }

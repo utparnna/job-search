@@ -11,10 +11,10 @@ import { JobDetails } from '../job.model';
   styleUrl: './job-details.component.css'
 })
 export class JobDetailsComponent {
-  jobDetails: JobDetails | any;
+  jobDetails!: JobDetails;
   constructor(private activatedRoute: ActivatedRoute, private jobService: JobService) {
     let jobID = this.activatedRoute.snapshot.params['jobId'];
-    this.jobService.getJobDetailsById(jobID).subscribe((jobDetails: any) => {
+    this.jobService.getJobDetailsById(jobID).subscribe((jobDetails) => {
       this.jobDetails = jobDetails;
     });
   }
