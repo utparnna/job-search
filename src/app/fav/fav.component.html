@@ -2,4 +2,5 @@
     @for (job of favJobList; track favJobList) {
         <app-job-list [job]="job" [showFavIcon]="false"></app-job-list>
     }
+    <p *ngIf="favJobList.length == 0">No favorites</p>
 </div>

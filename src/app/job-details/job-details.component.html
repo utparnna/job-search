@@ -1,4 +1,5 @@
 <button routerLink="/jobs">Back</button>
+@if (jobDetails) {
 <p>
     <img [src]="jobDetails.companyLogo" />
     <label>
@@ -27,3 +28,4 @@
 </p>
 <div [innerHTML]="jobDetails.description">
 </div>
+}
